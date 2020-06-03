@@ -6,14 +6,36 @@
 $color-title: #1a1818;
 $color-subtitle: #e63271;
 $color-btn: #00a146;
+$background-color: #ECF0F1;
+
+body {
+  text-align: center;
+  font-color: $color-title;
+}
 
 
+
+h1 {
+ font-family: 'Raleway', Helvetica, Arial, sans-serif;
+ font-size: 50px;
+ line-height: 70px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+p {
+ font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+ font-size: 15px;
+ line-height: 25px;
+}
 
 /*Navigation*/
 
 .fas {
 
-   margin: 20px;
+   margin: 10px;
    color: $color-btn;
 }
 
@@ -23,10 +45,11 @@ $color-btn: #00a146;
 }
 
 
+
 /*Header*/
 
 .splash {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url('https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-position: center center;
@@ -35,7 +58,7 @@ $color-btn: #00a146;
 }
 .splash-inner {
     position: absolute;
-    width: 100%;
+    width:100%''
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -44,10 +67,11 @@ $color-btn: #00a146;
 }
 .page-title {
     color: $color-title;
-    font-size: 60px;
+    font-size: 40px;
     margin: 48px 0 0 0;
-    position: relative;
     text-shadow: 2px 2px 2px black;
+    font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+    position: relative;
 }
 
 
@@ -55,6 +79,7 @@ $color-btn: #00a146;
     color: $color-subtitle;
     font-size: 30px;
     margin: 50px 0 0 0;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
 
 }
  .btn {
@@ -63,4 +88,74 @@ $color-btn: #00a146;
   color: $color-btn;
   border-color: $color-btn;
   font-weight: 700;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  width: 200px;
  }
+
+.btn-primary:hover {
+  background: $color-subtitle;
+  background-position: 0 100%;
+  border: $color-subtitle;
+
+}
+
+ /*Services*/
+
+ .card {
+   text-align: center;
+   border: none;
+ }
+
+.card-body i{
+  font-size: 30px;
+  color: $color-btn;
+  background: white;
+  border: 1px solid $color-btn;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/*Portfolio*/
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.portfolio {
+  background: $background-color;
+}
+
+.card-body {
+  background:white;
+}
+ .card {
+   background: white;
+ }
+
+ /*Footer*/
+
+footer
+
+
+
+
+@media query (max-width: 767px) {
+
+  .page-title {
+  font-size: 10px;
+  }
+  .page-subtitle {
+    font-size: 5px;
+
+  }
+
+}
