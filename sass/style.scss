@@ -58,7 +58,7 @@ p {
 }
 .splash-inner {
     position: absolute;
-    width:100%''
+    width:100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -143,19 +143,37 @@ p {
 
  /*Footer*/
 
-footer
+
+ footer
+ .contact {
+     display: flex-center;
+     padding: 3em 0em;
+     text-align: center;
+     background: white;
+         ul {
+             align-self: center;
+             list-style-type: none;
+             text-align: center;
+
+             li {
+                 display: inline-block;
+             }
+       }
+ }
+
+ .copyright {
+     align-self: center;
+ }
+
+ .contact p {
+     letter-spacing: 1px;
+     font-size: 0.90em;
+     margin-left: 10px;
+ }
 
 
-
-
-@media query (max-width: 767px) {
-
-  .page-title {
-  font-size: 10px;
-  }
-  .page-subtitle {
-    font-size: 5px;
-
-  }
-
-}
+ .contact a {
+     text-decoration: none;
+     color: black;
+     font-size: 40px;
+ }
