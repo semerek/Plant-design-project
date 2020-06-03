@@ -1,7 +1,28 @@
 /*Variables*/
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
 /*Navigation*/
 .fas {
-  margin: 20px;
+  margin: 10px;
   color: #00a146;
 }
 
@@ -12,17 +33,15 @@
 
 /*Header*/
 .splash {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url("https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .splash-inner {
   position: absolute;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -31,16 +50,17 @@
 
 .page-title {
   color: #1a1818;
-  font-size: 60px;
+  font-size: 40px;
   margin: 48px 0 0 0;
-  position: relative;
   text-shadow: 2px 2px 2px black;
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
 }
 
 .page-subtitle {
   color: #e63271;
   font-size: 30px;
   margin: 50px 0 0 0;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
 .btn {
@@ -49,6 +69,93 @@
   color: #00a146;
   border-color: #00a146;
   font-weight: 700;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  width: 200px;
 }
 
+.btn-primary:hover {
+  background: #e63271;
+  background-position: 0 100%;
+  border: #e63271;
+}
+
+/*Services*/
+.card {
+  text-align: center;
+  border: none;
+}
+
+.card-body i {
+  font-size: 30px;
+  color: #00a146;
+  background: white;
+  border: 1px solid #00a146;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/*Portfolio*/
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.portfolio {
+  background: #ECF0F1;
+}
+
+.card-body {
+  background: white;
+}
+
+.card {
+  background: white;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+footer ul li {
+  font-size: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+footer ul li i {
+  font-size: 30px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+}
+
+@media query {
+  .page-title {
+    font-size: 20px;
+  }
+  .page-subtitle {
+    font-family: 15px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
