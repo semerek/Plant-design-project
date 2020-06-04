@@ -1,34 +1,79 @@
 /*Variables*/
 body {
   text-align: center;
+  font-color: #1a1818;
+  line-height: 1.5;
 }
 
 h1 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 50px;
-  line-height: 70px;
+  line-height: 30px;
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 20px;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 
 p {
-  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
   font-size: 15px;
   line-height: 25px;
 }
 
-/*Navigation*/
-.fas {
-  margin: 10px;
-  color: #00a146;
+section {
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 
-.navbar-brand {
-  font-style: italic;
+/*Navigation*/
+.navigation {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  margin-top: 20px;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-right: 36px;
+  position: relative;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #1a1818;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 700;
+}
+
+.navigation a:hover {
+  color: #e63271;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  border-color: #00a146;
+  border-style: solid;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*Header*/
@@ -38,10 +83,12 @@ p {
   background-image: url("https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .splash-inner {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -54,6 +101,8 @@ p {
   margin: 48px 0 0 0;
   text-shadow: 2px 2px 2px black;
   font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  position: relative;
+  line-height: 0.5;
 }
 
 .page-subtitle {
@@ -73,16 +122,16 @@ p {
   width: 200px;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: #e63271;
   background-position: 0 100%;
   border: #e63271;
+  color: white;
 }
 
 /*Services*/
-.card {
-  text-align: center;
-  border: none;
+.row {
+  padding-top: 20px;
 }
 
 .card-body i {
@@ -112,50 +161,91 @@ p {
   background: #ECF0F1;
 }
 
-.card-body {
-  background: white;
-}
-
 .card {
-  background: white;
+  text-align: center;
+  border: none;
+  background-color: white;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 /*Footer*/
 footer {
+  bottom: 0;
   width: 100%;
-  color: white;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
 }
 
-footer ul {
+footer .contact {
+  display: flex-center;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  background: white;
+}
+
+footer .contact ul {
   list-style-type: none;
   text-align: center;
-  padding: 0;
 }
 
-footer ul li {
-  font-size: 0;
-  text-align: center;
+footer .contact ul li {
   display: inline-block;
 }
 
-footer ul li i {
-  font-size: 30px;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
+.contact p {
+  letter-spacing: 1px;
+  font-size: 0.90em;
+  padding-top: 15px;
 }
 
-@media query {
+.contact a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+
+footer .container {
+  text-align: left;
+}
+
+.contact-list {
+  display: inline-block;
+  padding-left: 0;
+  padding-top: 0;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .container {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: 0;
+  }
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navigation ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
   .page-title {
-    font-size: 20px;
+    font-size: 30px;
   }
   .page-subtitle {
-    font-family: 15px;
+    font-size: 20px;
+  }
+  footer .row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  footer .row .copyright {
+    transform: translateX(75%);
+  }
+  .contact-list {
+    text-align: center;
+    transform: translateX(100%);
   }
 }
 /*# sourceMappingURL=style.css.map */
