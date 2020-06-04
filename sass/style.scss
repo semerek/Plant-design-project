@@ -7,44 +7,84 @@ $color-title: #1a1818;
 $color-subtitle: #e63271;
 $color-btn: #00a146;
 $background-color: #ECF0F1;
+$font-text:'Goudy Bookletter 1911', Georgia, Times, serif;
+$title-text: 'Raleway', Helvetica, Arial, sans-serif;
 
 body {
   text-align: center;
   font-color: $color-title;
+  line-height: 1.5;
 }
 
 
 
 h1 {
- font-family: 'Raleway', Helvetica, Arial, sans-serif;
+ font-family: $title-text;
  font-size: 50px;
- line-height: 70px;
+ line-height: 30px;
 }
 h3 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 20px;
+  font-family: $title-text;
 }
 
 p {
- font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+ font-family: $font-text;
  font-size: 15px;
  line-height: 25px;
 }
 
+section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
 /*Navigation*/
 
-.fas {
 
-   margin: 10px;
-   color: $color-btn;
-}
+.navigation {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    margin-top: 20px;
+    margin: 0;
+    display: flex;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            margin-right: 36px;
+            position: relative;
+        }
+    }
+.navigation a {
+  text-decoration: none;
+  color: $color-title;
+  font-family: $title-text;
+  font-weight: 700;
+    }
 
-.navbar-brand {
- font-style: italic;
- font-weight: 700;
-}
+  .navigation a:hover {
+        color: $color-subtitle;
+        }
 
-
+  .btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    border-color: $color-btn;
+    border-style: solid;
+    font-family:$title-text ;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /*Header*/
 
@@ -72,6 +112,8 @@ p {
     text-shadow: 2px 2px 2px black;
     font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
     position: relative;
+    line-height: 0.5;
+
 }
 
 
@@ -92,19 +134,19 @@ p {
   width: 200px;
  }
 
-.btn-primary:hover {
+.btn:hover {
   background: $color-subtitle;
   background-position: 0 100%;
   border: $color-subtitle;
+  color: white;
 
 }
 
  /*Services*/
 
- .card {
-   text-align: center;
-   border: none;
- }
+.row {
+  padding-top: 20px;
+}
 
 .card-body i{
   font-size: 30px;
@@ -122,6 +164,7 @@ p {
   font-size: 20px;
 }
 
+
 /*Portfolio*/
 
 .card img {
@@ -134,27 +177,32 @@ p {
   background: $background-color;
 }
 
-.card-body {
-  background:white;
-}
+
  .card {
-   background: white;
- }
+   text-align: center;
+   border: none;
+   background-color: white;
+   padding-bottom: 10px;
+   margin-bottom: 30px;
+   padding-bottom: 10px;
+}
+
 
  /*Footer*/
 
-
- footer
- .contact {
+footer {
+  bottom: 0;
+  width: 100%;
+}
+ footer .contact {
      display: flex-center;
-     padding: 3em 0em;
+     padding-top: 0;
+     padding-bottom: 0;
      text-align: center;
      background: white;
          ul {
-             align-self: center;
              list-style-type: none;
              text-align: center;
-
              li {
                  display: inline-block;
              }
@@ -164,7 +212,7 @@ p {
  .contact p {
      letter-spacing: 1px;
      font-size: 0.90em;
-     margin-left: 10px;
+     padding-top: 15px;
  }
 
  .contact a {
@@ -172,3 +220,52 @@ p {
      color: black;
      font-size: 40px;
  }
+
+  footer .container {
+    text-align: left;
+  }
+
+  .contact-list {
+    display: inline-block;
+    padding-left: 0;
+    padding-top: 0;
+    transform: translateX(-50%)
+  }
+
+
+  @media (max-width: 767px) {
+
+.container {
+      flex-direction: column;
+      margin: 0;
+      }
+
+section {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      }
+
+.navigation ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+      }
+
+.page-title {
+  font-size: 30px;
+
+}
+.page-subtitle {
+  font-size: 20px;
+}
+footer .row {
+  flex-direction: column;
+    .copyright {
+      transform: translateX(75%);
+    }
+}
+.contact-list {
+  text-align: center;
+  transform: translateX(100%);
+
+  }
+}
