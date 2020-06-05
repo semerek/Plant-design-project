@@ -14,6 +14,8 @@ body {
   text-align: center;
   font-color: $color-title;
   line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -21,7 +23,7 @@ body {
 h1 {
  font-family: $title-text;
  font-size: 50px;
- line-height: 30px;
+
 }
 h3 {
   font-weight: 900;
@@ -55,9 +57,9 @@ section {
             padding: 0;
         }
         li {
-            display: inline-block;
+            display:block;
             margin-right: 36px;
-            position: relative;
+
         }
     }
 .navigation a {
@@ -68,7 +70,8 @@ section {
     }
 
   .navigation a:hover {
-        color: $color-subtitle;
+        color: white;
+        background: $color-subtitle;
         }
 
   .btn {
@@ -85,6 +88,28 @@ section {
     text-decoration: none;
     cursor: pointer;
   }
+
+
+  .logo p {
+    font-family: $title-text;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .logo .fas {
+    color: $color-btn;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+  .logo {
+    display: inline-flex;
+    transform: translateY(-25%);
+
+  }
+  .nav-list {
+    display: inline-flex;
+  ;
+}
 
 /*Header*/
 
@@ -108,14 +133,11 @@ section {
 .page-title {
     color: $color-title;
     font-size: 40px;
-    margin: 48px 0 0 0;
     text-shadow: 2px 2px 2px black;
     font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
     position: relative;
-    line-height: 0.5;
 
 }
-
 
 .page-subtitle {
     color: $color-subtitle;
@@ -162,6 +184,11 @@ section {
 .slogan {
   font-style: italic;
   font-size: 20px;
+}
+
+.fas {
+  padding-right: 0;
+  padding-top: 0;
 }
 
 
@@ -235,17 +262,14 @@ footer {
 
   @media (max-width: 767px) {
 
-.container {
-      flex-direction: column;
-      margin: 0;
-      }
+
 
 section {
       padding-top: 20px;
       padding-bottom: 20px;
       }
 
-.navigation ul li {
+.nav-list  li {
     margin-right: 5px;
     margin-left: 5px;
       }
@@ -257,15 +281,17 @@ section {
 .page-subtitle {
   font-size: 20px;
 }
-footer .row {
-  flex-direction: column;
-    .copyright {
-      transform: translateX(75%);
-    }
-}
-.contact-list {
-  text-align: center;
-  transform: translateX(100%);
 
-  }
+.row {
+  flex-direction: column;
+}
+
+.contact-list {
+  transform: translateX(70%);
+}
+.copyright {
+    text-align: center;
+    }
+
+
 }
