@@ -3,12 +3,13 @@ body {
   text-align: center;
   font-color: #1a1818;
   line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 50px;
-  line-height: 30px;
 }
 
 h3 {
@@ -45,9 +46,8 @@ section {
 }
 
 .navigation li {
-  display: inline-block;
+  display: block;
   margin-right: 36px;
-  position: relative;
 }
 
 .navigation a {
@@ -58,7 +58,8 @@ section {
 }
 
 .navigation a:hover {
-  color: #e63271;
+  color: white;
+  background: #e63271;
 }
 
 .btn {
@@ -74,6 +75,30 @@ section {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+}
+
+.logo p {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.logo .fas {
+  color: #00a146;
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.logo {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  transform: translateY(-25%);
+}
+
+.nav-list {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 /*Header*/
@@ -98,11 +123,9 @@ section {
 .page-title {
   color: #1a1818;
   font-size: 40px;
-  margin: 48px 0 0 0;
   text-shadow: 2px 2px 2px black;
   font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
   position: relative;
-  line-height: 0.5;
 }
 
 .page-subtitle {
@@ -148,6 +171,11 @@ section {
 .slogan {
   font-style: italic;
   font-size: 20px;
+}
+
+.fas {
+  padding-right: 0;
+  padding-top: 0;
 }
 
 /*Portfolio*/
@@ -217,16 +245,11 @@ footer .container {
 }
 
 @media (max-width: 767px) {
-  .container {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    margin: 0;
-  }
   section {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .navigation ul li {
+  .nav-list li {
     margin-right: 5px;
     margin-left: 5px;
   }
@@ -236,16 +259,15 @@ footer .container {
   .page-subtitle {
     font-size: 20px;
   }
-  footer .row {
+  .row {
     -ms-flex-direction: column;
         flex-direction: column;
   }
-  footer .row .copyright {
-    transform: translateX(75%);
-  }
   .contact-list {
+    transform: translateX(70%);
+  }
+  .copyright {
     text-align: center;
-    transform: translateX(100%);
   }
 }
 /*# sourceMappingURL=style.css.map */
