@@ -14,8 +14,7 @@ body {
   text-align: center;
   font-color: $color-title;
   line-height: 1.5;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
 
 
@@ -55,10 +54,11 @@ section {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            text-align: right;
         }
         li {
-            display:block;
-            margin-right: 36px;
+            display:inline-block;
+            margin-right: 20px;
 
         }
     }
@@ -72,6 +72,7 @@ section {
   .navigation a:hover {
         color: white;
         background: $color-subtitle;
+        padding: 5px;
         }
 
   .btn {
@@ -106,10 +107,7 @@ section {
     transform: translateY(-25%);
 
   }
-  .nav-list {
-    display: inline-flex;
-  ;
-}
+
 
 /*Header*/
 
@@ -214,6 +212,14 @@ section {
    padding-bottom: 10px;
 }
 
+.card p {
+  margin-top: 0;
+
+}
+.card h3 {
+  margin-bottom: 0;
+}
+
 
  /*Footer*/
 
@@ -229,7 +235,8 @@ footer {
      background: white;
          ul {
              list-style-type: none;
-             text-align: center;
+             text-align: left;
+             transform: translateX(-15%);
              li {
                  display: inline-block;
              }
@@ -252,13 +259,6 @@ footer {
     text-align: left;
   }
 
-  .contact-list {
-    display: inline-block;
-    padding-left: 0;
-    padding-top: 0;
-    transform: translateX(-50%)
-  }
-
 
   @media (max-width: 767px) {
 
@@ -269,10 +269,14 @@ section {
       padding-bottom: 20px;
       }
 
-.nav-list  li {
-    margin-right: 5px;
-    margin-left: 5px;
-      }
+.nav-list
+  li {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+  .navigation ul {
+    text-align: left;;
+  }
 
 .page-title {
   font-size: 30px;
@@ -286,12 +290,14 @@ section {
   flex-direction: column;
 }
 
-.contact-list {
-  transform: translateX(70%);
-}
 .copyright {
     text-align: center;
     }
+
+footer .contact ul {
+    transform: translateX(0%);
+    text-align: center;
+}
 
 
 }
