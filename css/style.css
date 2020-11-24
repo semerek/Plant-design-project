@@ -1,110 +1,17 @@
 /*Variables*/
 body {
-  text-align: center;
-  font-color: #1a1818;
-  line-height: 1.5;
-  margin: 0;
+  margin: 0 auto;
 }
 
 h1 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 50px;
-}
-
-h3 {
-  font-weight: 900;
-  font-size: 20px;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-}
-
-p {
-  font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
-  font-size: 15px;
-  line-height: 25px;
-}
-
-section {
-  padding-bottom: 80px;
-  padding-top: 80px;
-}
-
-/*Navigation*/
-.navigation {
-  padding-top: 20px;
-  padding-bottom: 12px;
-  margin-top: 20px;
-  margin: 0;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
-.navigation li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.navigation a {
-  text-decoration: none;
-  color: #1a1818;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.navigation a:hover {
-  color: white;
-  background: #e63271;
-  padding: 5px;
-}
-
-.btn {
-  display: inline-block;
-  min-width: 160px;
-  margin: 24px auto 0 auto;
-  padding: 16px;
-  border-radius: 5px;
-  border-color: #00a146;
-  border-style: solid;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 16px;
   text-align: center;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-.logo p {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.logo .fas {
-  color: #00a146;
-  vertical-align: middle;
-  padding-top: 20px;
-  padding-right: 10px;
-}
-
-.logo {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  transform: translateY(-25%);
-}
-
-/*Header*/
+/*INTRO*/
 .splash {
-  min-height: 100vh;
+  text-align: center;
+  height: 100vh;
   position: relative;
-  background-image: url("https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .splash-inner {
@@ -113,44 +20,84 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  line-height: 60px;
+}
+
+h2 {
   text-align: center;
+  font-weight: bold;
+}
+
+.intro {
+  background-image: url("https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.welcome-title {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  color: #1a1818;
+  margin-bottom: 20px;
 }
 
 .page-title {
-  color: #1a1818;
-  font-size: 40px;
-  text-shadow: 2px 2px 2px black;
-  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
-  position: relative;
-}
-
-.page-subtitle {
+  font-size: 80px;
+  font-weight: bold;
   color: #e63271;
-  font-size: 30px;
-  margin: 50px 0 0 0;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
-.btn {
-  margin: 20px;
+.btn-one {
   background: inherit;
   color: #00a146;
   border-color: #00a146;
-  font-weight: 700;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  width: 200px;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 40px;
+  width: 240px;
 }
 
-.btn:hover {
+.btn-one:hover {
   background: #e63271;
   background-position: 0 100%;
   border: #e63271;
   color: white;
 }
 
+/*NAVIGATION*/
+.nav-link {
+  color: white;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  padding-left: 100px;
+  font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
+  color: #e63271;
+}
+
+p {
+  text-align: center;
+  font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
+  color: gray;
+}
+
 /*Services*/
 .row {
   padding-top: 20px;
+}
+
+.card-body {
+  border: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .card-body i {
@@ -159,9 +106,9 @@ section {
   background: white;
   border: 1px solid #00a146;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 70px;
+  line-height: 60px;
+  text-align: center;
 }
 
 .slogan {

@@ -1,7 +1,5 @@
 
-
 /*Variables*/
-
 
 $color-title: #1a1818;
 $color-subtitle: #e63271;
@@ -11,150 +9,65 @@ $font-text:'Goudy Bookletter 1911', Georgia, Times, serif;
 $title-text: 'Raleway', Helvetica, Arial, sans-serif;
 
 body {
-  text-align: center;
-  font-color: $color-title;
-  line-height: 1.5;
-  margin: 0;
+  margin: 0 auto;
 }
-
-
 
 h1 {
- font-family: $title-text;
- font-size: 50px;
-
-}
-h3 {
-  font-weight: 900;
-  font-size: 20px;
-  font-family: $title-text;
+  text-align: center;
 }
 
-p {
- font-family: $font-text;
- font-size: 15px;
- line-height: 25px;
-}
-
-section {
-    padding-bottom: 80px;
-    padding-top: 80px;
-}
-
-/*Navigation*/
-
-
-.navigation {
-    padding-top: 20px;
-    padding-bottom: 12px;
-    margin-top: 20px;
-    margin: 0;
-    display: flex;
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: right;
-        }
-        li {
-            display:inline-block;
-            margin-right: 20px;
-
-        }
-    }
-.navigation a {
-  text-decoration: none;
-  color: $color-title;
-  font-family: $title-text;
-  font-weight: 700;
-    }
-
-  .navigation a:hover {
-        color: white;
-        background: $color-subtitle;
-        padding: 5px;
-        }
-
-  .btn {
-    display: inline-block;
-    min-width: 160px;
-    margin: 24px auto 0 auto;
-    padding: 16px;
-    border-radius: 5px;
-    border-color: $color-btn;
-    border-style: solid;
-    font-family:$title-text ;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-  .logo p {
-    font-family: $title-text;
-    font-weight: 700;
-    font-style: italic;
-  }
-  .logo .fas {
-    color: $color-btn;
-    vertical-align: middle;
-    padding-top: 20px;
-    padding-right: 10px;
-  }
-  .logo {
-    display: inline-flex;
-    transform: translateY(-25%);
-
-  }
-
-
-/*Header*/
+/*INTRO*/
 
 .splash {
-  min-height: 100vh;
+  text-align: center;
+  height: 100vh;
   position: relative;
+}
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 60px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+.intro {
   background-image: url('https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
-.splash-inner {
-    position: absolute;
-    width:100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
 
+.welcome-title {
+  font-family: $title-text;
+  font-size: 30px;
+  color: $color-title;
+  margin-bottom: 20px;
 }
+
 .page-title {
-    color: $color-title;
-    font-size: 40px;
-    text-shadow: 2px 2px 2px black;
-    font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
-    position: relative;
-
+  font-size: 80px;
+  font-weight: bold;
+  color:$color-subtitle;
 }
 
-.page-subtitle {
-    color: $color-subtitle;
-    font-size: 30px;
-    margin: 50px 0 0 0;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
-
-}
- .btn {
-  margin: 20px;
-  background: inherit;
+.btn-one {
+  background:inherit;
   color: $color-btn;
   border-color: $color-btn;
-  font-weight: 700;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  width: 200px;
- }
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 40px;
+  width: 240px;
 
-.btn:hover {
+}
+
+.btn-one:hover {
   background: $color-subtitle;
   background-position: 0 100%;
   border: $color-subtitle;
@@ -162,22 +75,53 @@ section {
 
 }
 
- /*Services*/
+
+/*NAVIGATION*/
+
+.nav-link {
+  color: white;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  padding-left: 100px;
+  font-family: $font-text;
+  color: $color-subtitle;
+}
+
+
+p {
+    text-align: center;
+    font-family: $font-text;
+    color: gray;
+}
+
+/*Services*/
 
 .row {
   padding-top: 20px;
 }
 
-.card-body i{
+.card-body {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.card-body i {
   font-size: 30px;
   color: $color-btn;
   background: white;
   border: 1px solid $color-btn;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 70px;
+  line-height: 60px;
+  text-align: center;
 }
+
 
 .slogan {
   font-style: italic;
@@ -259,45 +203,45 @@ footer {
     text-align: left;
   }
 
-
+  
   @media (max-width: 767px) {
 
-
-
-section {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      }
-
-.nav-list
-  li {
-    margin-right: 2px;
-    margin-left: 2px;
-}
-  .navigation ul {
-    text-align: left;;
-  }
-
-.page-title {
-  font-size: 30px;
-
-}
-.page-subtitle {
-  font-size: 20px;
-}
-
-.row {
-  flex-direction: column;
-}
-
-.copyright {
-    text-align: center;
+    section {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          }
+    
+    .nav-list
+      li {
+        margin-right: 2px;
+        margin-left: 2px;
     }
+      .navigation ul {
+        text-align: left;;
+      }
+    
+    .page-title {
+      font-size: 30px;
+    
+    }
+    .page-subtitle {
+      font-size: 20px;
+    }
+    
+    .row {
+      flex-direction: column;
+    }
+    
+    .copyright {
+        text-align: center;
+        }
+    
+    footer .contact ul {
+        transform: translateX(0%);
+        text-align: center;
+    }
+    
+    }
+    
 
-footer .contact ul {
-    transform: translateX(0%);
-    text-align: center;
-}
 
-
-}
